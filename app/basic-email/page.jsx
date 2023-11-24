@@ -35,8 +35,13 @@ export default function BasicEmail() {
             ></textarea>
           </div>
         </div>
-        <div>
-          <button onClick={sendEmail}>Send Email </button>
+        <div className="mt-4">
+          <button
+            onClick={sendEmail}
+            className="w-full py-2 ppx-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus-outline-none  focus-ring-2 focus-ring-offset-2 focus:ring-indigo-500"
+          >
+            Send Email{" "}
+          </button>
         </div>
       </div>
     </div>
