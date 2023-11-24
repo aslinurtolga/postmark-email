@@ -6,34 +6,37 @@ export default function BasicEmail() {
   const [subject, setSubject] = useState();
   const [body, setBody] = useState();
 
-  async function sendEmail () {
+  async function sendEmail() {
     return null;
   }
 
   return (
-    <div>
-      <div>
-        <div>
-          <h2>Send An Email</h2>
+    <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-5 lg:px-8">
+      <div className="max-w-md mx-auto">
+        <div className="mb-8 text-center">
+          <h2 className="text-3xl font-extrabold text-white">Send An Email</h2>
         </div>
-        <div>
-          <label>Subject</label>
-          <input 
-          type="text" 
-          value={subject}
-          onChange={(e) => setSubject (e.target.value)}
+        <div className="mt-4">
+          <label className="block text-sm font-medium text-gray-400">
+            Subject
+          </label>
+          <input
+            type="text"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+            className="mt-1 p-2 w-full rounded-md bg-gray-800 border border-gray-700 focus-outline-none focus-border-white"
           />
           <div>
-          <label>Body</label>
-          <input 
-          type="text" 
-          value={body}
-          onChange={(e) => setBody (e.target.value)}
-          />
+            <label>Body</label>
+            <textarea
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+              className="mt-1 p-2 w-full rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:border-white "
+            ></textarea>
           </div>
         </div>
         <div>
-            <button onClick={sendEmail}>Send Email </button>
+          <button onClick={sendEmail}>Send Email </button>
         </div>
       </div>
     </div>
