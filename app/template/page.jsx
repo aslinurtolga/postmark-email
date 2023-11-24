@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 
-export default function BasicEmail() {
-  const [subject, setSubject] = useState();
-  const [body, setBody] = useState();
+export default function TemplateEmail() {
+  const [name, setName] = useState();
+  const [age, setAge] = useState();
 
   async function sendEmail() {
     return null;
@@ -14,27 +14,30 @@ export default function BasicEmail() {
     <div className="min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-5 lg:px-8">
       <div className="max-w-md mx-auto">
         <div className="mb-8 text-center">
-          <h2 className="text-3xl font-extrabold text-white">Send An Email</h2>
+          <h2 className="text-3xl font-extrabold text-white">
+            Send An Email Template
+          </h2>
         </div>
         <div className="mt-4">
           <label className="block text-sm font-medium text-gray-400">
-            Subject
+            Name
           </label>
           <input
             type="text"
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className="mt-1 p-2 w-full rounded-md bg-gray-800 border border-gray-700 focus-outline-none focus-border-white"
           />
           <div>
             <label className="block text-sm font-medium text-gray-400">
-              Body
+              Age
             </label>
-            <textarea
-              value={body}
-              onChange={(e) => setBody(e.target.value)}
+            <input
+              type="text"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
               className="mt-1 p-2 w-full h-32 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:border-white "
-            ></textarea>
+            />
           </div>
         </div>
         <div className="mt-4">
